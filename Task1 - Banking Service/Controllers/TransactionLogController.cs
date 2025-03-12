@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Text;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Task1___Banking_Service.Data;
 using Task1___Banking_Service.Models;
+using Newtonsoft.Json;
+using System.Text;
+using RabbitMQ.Client;
 
 namespace Task1___Banking_Service.Controllers;
 
@@ -10,10 +14,12 @@ namespace Task1___Banking_Service.Controllers;
 public class TransactionLogController: ControllerBase
 {
     private readonly TransactionDbContext _context;
+    private readonly IModel _channel;
 
-    public TransactionLogController(TransactionDbContext context)
+    public TransactionLogController(TransactionDbContext context, IModel channel)
     {
         _context = context;
+        _channel = channel;  
     }
 
     [HttpPost]
@@ -21,8 +27,15 @@ public class TransactionLogController: ControllerBase
     {
         _context.TransactionLogs.Add(log);
         await _context.SaveChangesAsync();
+
+        
+        var message = JsonConvert.SerializeObject(log);
+        var body = Encoding.UTF8.GetBytes(message);
+        _channel.BasicPublish(exchange: "", routingKey: "transaction_queue", basicProperties: null, body: body);
+
         return CreatedAtAction(nameof(GetTransactionLogById), new { id = log.Id }, log);
     }
+    
 
     [HttpGet("{id:long}")]
     public async Task<IActionResult> GetTransactionLogById(long id)

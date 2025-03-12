@@ -133,3 +133,5 @@ C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.pdb
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.genruntimeconfig.cache
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\ref\Task1 - Banking Service.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\RabbitMQ.Client.dll

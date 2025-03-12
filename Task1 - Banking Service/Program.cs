@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Task1___Banking_Service.Data;
 using RabbitMQ.Client;
+using Task1___Banking_Service.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ var connection = factory.CreateConnection();
 var channel = connection.CreateModel();
 channel.QueueDeclare(queue: "transaction_queue", durable: false, exclusive: false, autoDelete: false, arguments: null);
 builder.Services.AddSingleton(channel);
+builder.Services.AddHostedService<TransactionLogConsumer>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
