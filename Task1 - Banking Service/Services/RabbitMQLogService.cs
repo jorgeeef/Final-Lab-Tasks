@@ -1,25 +1,23 @@
 ﻿using System.Text;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using Serilog;
 using Task1___Banking_Service.Data;
 using Task1___Banking_Service.Models;
 
-namespace Task1___Banking_Service.Services;
-
-public class RabbitMQLogService: BackgroundService
+public class RabbitMQLogService : BackgroundService
 {
-    private readonly TransactionDbContext _context;
+    private readonly IServiceProvider _serviceProvider;
     private readonly string _queueName = "logQueue";
     private readonly string _rabbitMQHost = "localhost";
 
-    public RabbitMQLogService(TransactionDbContext context)
+    public RabbitMQLogService(IServiceProvider serviceProvider)
     {
-        _context = context;
+        _serviceProvider = serviceProvider;
     }
 
-    protected override Task ExecuteAsync(CancellationToken stoppingToken)
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         var factory = new ConnectionFactory() { HostName = _rabbitMQHost };
         var connection = factory.CreateConnection();
@@ -36,17 +34,21 @@ public class RabbitMQLogService: BackgroundService
 
         channel.BasicConsume(queue: _queueName, autoAck: true, consumer: consumer);
 
-        return Task.CompletedTask;
+        await Task.CompletedTask;
     }
 
     private void ProcessLogMessage(string message)
     {
-        var log = JsonConvert.DeserializeObject<Logs>(message);
-
-        if (log != null)
+        using (var scope = _serviceProvider.CreateScope())
         {
-            _context.Logs.Add(log);
-            _context.SaveChanges();
+            var context = scope.ServiceProvider.GetRequiredService<TransactionDbContext>();
+            var log = JsonConvert.DeserializeObject<Logs>(message);
+
+            if (log != null)
+            {
+                context.Logs.Add(log);
+                context.SaveChanges();
+            }
         }
     }
 }

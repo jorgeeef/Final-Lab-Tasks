@@ -22,4 +22,5 @@ public class TransactionDbContext: DbContext
             .HasIndex(log => log.Timestamp)
             .HasDatabaseName("IX_Timestamp");
     }
+    
 }

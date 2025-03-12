@@ -6,7 +6,6 @@ using RabbitMQ.Client;
 using Serilog;
 using Task1___Banking_Service.Consumers;
 using Task1___Banking_Service.Models;
-using Task1___Banking_Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +29,7 @@ builder.Services.AddCors(options =>
     });
 });
 
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
@@ -42,6 +42,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddSingleton<RabbitMQLogService>();
+builder.Services.AddHostedService(provider => provider.GetRequiredService<RabbitMQLogService>());
 
 builder.Services.AddDbContext<TransactionDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
