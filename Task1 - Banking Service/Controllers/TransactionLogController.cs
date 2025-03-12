@@ -58,4 +58,65 @@ public class TransactionLogController : ControllerBase
         var logs = await _context.TransactionLogs.Where(t => t.AccountId == accountId).ToListAsync();
         return Ok(logs);
     }
+    
+    
+    [HttpGet("common-transactions")]
+    public async Task<IActionResult> GetCommonTransactions([FromQuery] List<long> accountIds)
+    {
+        if (accountIds == null || !accountIds.Any())
+        {
+            return BadRequest("Please provide at least one AccountId.");
+        }
+
+        var transactions = await _context.TransactionLogs
+            .Where(t => accountIds.Contains(t.AccountId))
+            .ToListAsync();
+
+        var commonTransactions = transactions
+            .GroupBy(t => new { t.TransactionType, t.Amount })
+            .Where(g => g.Count() > 1)
+            .Select(g => new
+            {
+                TransactionId = g.First().Id,
+                AccountIds = g.Select(t => t.AccountId).ToList(),
+                TransactionType = g.Key.TransactionType,
+                Amount = g.Key.Amount
+            })
+            .ToList();
+
+        return Ok(commonTransactions);
+    }
+
+    
+    [HttpGet("balance-summary")]
+    public async Task<IActionResult> GetAccountBalanceSummary([FromQuery] List<long> accountIds)
+    {
+        if (accountIds == null || !accountIds.Any())
+        {
+            return BadRequest("Please provide at least one AccountId.");
+        }
+
+        var transactions = await _context.TransactionLogs
+            .Where(t => accountIds.Contains(t.AccountId))
+            .ToListAsync();
+
+        if (!transactions.Any())
+        {
+            return NotFound("No transactions found for the given accounts.");
+        }
+
+        var summary = transactions
+            .GroupBy(t => t.AccountId)
+            .Select(g => new
+            {
+                AccountId = g.Key,
+                TotalDeposits = g.Where(t => t.TransactionType == "Deposit").Sum(t => t.Amount),
+                TotalWithdrawals = g.Where(t => t.TransactionType == "Withdrawal").Sum(t => t.Amount),
+                TotalBalance = g.Where(t => t.TransactionType == "Deposit").Sum(t => t.Amount) -
+                               g.Where(t => t.TransactionType == "Withdrawal").Sum(t => t.Amount)
+            })
+            .ToList();
+
+        return Ok(new { Accounts = summary });
+    }
 }

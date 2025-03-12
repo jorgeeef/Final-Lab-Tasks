@@ -8,4 +8,5 @@ public class TransactionDbContext: DbContext
     public TransactionDbContext(DbContextOptions<TransactionDbContext> options) : base(options) { }
 
     public DbSet<TransactionLog> TransactionLogs { get; set; }
+    public DbSet<AccountTransaction> AccountTransaction { get; set; }
 }
