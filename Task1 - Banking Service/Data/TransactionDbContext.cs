@@ -11,4 +11,15 @@ public class TransactionDbContext: DbContext
     public DbSet<AccountTransaction> AccountTransaction { get; set; }
     
     public DbSet<Logs> Logs { get; set; } 
+    
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Logs>()
+            .HasIndex(log => log.RequestId)
+            .HasDatabaseName("IX_RequestId");
+
+        modelBuilder.Entity<Logs>()
+            .HasIndex(log => log.Timestamp)
+            .HasDatabaseName("IX_Timestamp");
+    }
 }
