@@ -50,6 +50,7 @@ public class LogsController : ControllerBase
         return Ok(logs);
     }
 
+    
     // POST /api/logs
     [HttpPost]
     public async Task<IActionResult> PostLog([FromBody] Logs log)
