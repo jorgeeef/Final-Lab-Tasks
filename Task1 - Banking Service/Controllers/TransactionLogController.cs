@@ -60,63 +60,70 @@ public class TransactionLogController : ControllerBase
     }
     
     
-    [HttpGet("common-transactions")]
-    public async Task<IActionResult> GetCommonTransactions([FromQuery] List<long> accountIds)
-    {
-        if (accountIds == null || !accountIds.Any())
+    // Task2: GET /accounts/common-transactions
+        [HttpGet("common-transactions")]
+        public async Task<IActionResult> GetCommonTransactions([FromQuery] List<long> accountIds)
         {
-            return BadRequest("Please provide at least one AccountId.");
+            if (accountIds == null || accountIds.Count < 2)
+            {
+                return BadRequest("Please provide at least two account IDs.");
+            }
+
+            var commonTransactions = await _context.TransactionLogs
+                .Where(t => accountIds.Contains(t.AccountId))
+                .ToListAsync();
+
+            if (!commonTransactions.Any())
+            {
+                return NotFound("No common transactions found for the given accounts.");
+            }
+
+            // Group by transaction type and amount 
+            var commonTransactionGroups = commonTransactions
+                .GroupBy(t => new { t.TransactionType, t.Amount })
+                .Where(g => g.Count() > 1)
+                .Select(g => new
+                {
+                    TransactionId = g.FirstOrDefault().Id,
+                    AccountIds = g.Select(t => t.AccountId).Distinct().ToList(),
+                    g.Key.TransactionType,
+                    g.Key.Amount
+                })
+                .ToList();
+
+            return Ok(commonTransactionGroups);
         }
 
-        var transactions = await _context.TransactionLogs
-            .Where(t => accountIds.Contains(t.AccountId))
-            .ToListAsync();
+        // Task 2: GET /accounts/balance-summary/{userId}
+        [HttpGet("balance-summary/{userId}")]
+        public async Task<IActionResult> GetAccountBalanceSummary(long userId)
+        {
+            var accountTransactions = await _context.AccountTransaction
+                .Where(at => at.UserId == userId)
+                .ToListAsync();
 
-        var commonTransactions = transactions
-            .GroupBy(t => new { t.TransactionType, t.Amount })
-            .Where(g => g.Count() > 1)
-            .Select(g => new
+            if (!accountTransactions.Any())
             {
-                TransactionId = g.First().Id,
-                AccountIds = g.Select(t => t.AccountId).ToList(),
-                TransactionType = g.Key.TransactionType,
-                Amount = g.Key.Amount
-            })
-            .ToList();
+                return NotFound("No accounts found for the given user.");
+            }
+            
+            var transactions = await _context.TransactionLogs
+                .Where(t => accountTransactions.Select(at => at.AccountId).Contains(t.AccountId))
+                .ToListAsync();
 
-        return Ok(commonTransactions);
-    }
+            var balanceSummary = transactions
+                .GroupBy(t => t.AccountId)
+                .Select(g => new
+                {
+                    AccountId = g.Key,
+                    TotalDeposits = g.Where(t => t.TransactionType == "Deposit").Sum(t => t.Amount),
+                    TotalWithdrawals = g.Where(t => t.TransactionType == "Withdrawal").Sum(t => t.Amount),
+                    TotalBalance = g.Where(t => t.TransactionType == "Deposit").Sum(t => t.Amount) -
+                                   g.Where(t => t.TransactionType == "Withdrawal").Sum(t => t.Amount)
+                })
+                .ToList();
 
+            return Ok(new { UserId = userId, Accounts = balanceSummary });
+        }
     
-    [HttpGet("balance-summary")]
-    public async Task<IActionResult> GetAccountBalanceSummary([FromQuery] List<long> accountIds)
-    {
-        if (accountIds == null || !accountIds.Any())
-        {
-            return BadRequest("Please provide at least one AccountId.");
-        }
-
-        var transactions = await _context.TransactionLogs
-            .Where(t => accountIds.Contains(t.AccountId))
-            .ToListAsync();
-
-        if (!transactions.Any())
-        {
-            return NotFound("No transactions found for the given accounts.");
-        }
-
-        var summary = transactions
-            .GroupBy(t => t.AccountId)
-            .Select(g => new
-            {
-                AccountId = g.Key,
-                TotalDeposits = g.Where(t => t.TransactionType == "Deposit").Sum(t => t.Amount),
-                TotalWithdrawals = g.Where(t => t.TransactionType == "Withdrawal").Sum(t => t.Amount),
-                TotalBalance = g.Where(t => t.TransactionType == "Deposit").Sum(t => t.Amount) -
-                               g.Where(t => t.TransactionType == "Withdrawal").Sum(t => t.Amount)
-            })
-            .ToList();
-
-        return Ok(new { Accounts = summary });
-    }
 }
