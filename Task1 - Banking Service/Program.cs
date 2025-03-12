@@ -6,6 +6,7 @@ using RabbitMQ.Client;
 using Serilog;
 using Task1___Banking_Service.Consumers;
 using Task1___Banking_Service.Models;
+using Task1___Banking_Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,8 @@ var channel = connection.CreateModel();
 channel.QueueDeclare(queue: "transaction_queue", durable: false, exclusive: false, autoDelete: false, arguments: null);
 builder.Services.AddSingleton(channel);
 builder.Services.AddHostedService<TransactionLogConsumer>();
+
+builder.Services.AddHostedService<RabbitMQLogService>();
 
 builder.Services.AddCors(options =>
 {
