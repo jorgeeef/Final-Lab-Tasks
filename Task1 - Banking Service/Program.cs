@@ -1,8 +1,11 @@
+using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OData.ModelBuilder;
 using Task1___Banking_Service.Data;
 using RabbitMQ.Client;
 using Serilog;
 using Task1___Banking_Service.Consumers;
+using Task1___Banking_Service.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +33,16 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<TransactionDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+var modelBuilder = new ODataConventionModelBuilder();
+modelBuilder.EntitySet<TransactionLog>("TransactionLogs");
+builder.Services.AddControllers()
+    .AddOData(options => options
+        .Select()
+        .Filter()
+        .OrderBy()
+        .Expand()
+        .SetMaxTop(100)
+        .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
 
 var app = builder.Build();
 
