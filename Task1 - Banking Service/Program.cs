@@ -17,6 +17,16 @@ channel.QueueDeclare(queue: "transaction_queue", durable: false, exclusive: fals
 builder.Services.AddSingleton(channel);
 builder.Services.AddHostedService<TransactionLogConsumer>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        policy.AllowAnyOrigin() // Allow requests from any origin
+            .AllowAnyMethod()  // Allow any HTTP method 
+            .AllowAnyHeader(); // Allow any headers
+    });
+});
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)

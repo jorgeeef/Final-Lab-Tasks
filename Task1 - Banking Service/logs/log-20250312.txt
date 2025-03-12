@@ -138,3 +138,159 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 2025-03-12 14:57:44.657 +02:00 [INF] HTTP GET /odata/$metadata responded 200 in 4.6423 ms
 2025-03-12 14:57:44.658 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/odata/$metadata - 200 null application/xml; charset=utf-8 5.569ms
 2025-03-12 15:00:01.160 +02:00 [INF] Application is shutting down...
+2025-03-12 15:02:29.584 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-12 15:02:29.601 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - null null
+2025-03-12 15:02:29.616 +02:00 [INF] Hosting environment: Development
+2025-03-12 15:02:29.616 +02:00 [INF] Content root path: C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service
+2025-03-12 15:02:29.782 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - 200 null text/html;charset=utf-8 185.3213ms
+2025-03-12 15:02:29.887 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - null null
+2025-03-12 15:02:30.056 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 169.8213ms
+2025-03-12 15:02:35.370 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44331/api/logs - application/json;odata.metadata=minimal;odata.streaming=true 8
+2025-03-12 15:02:35.384 +02:00 [INF] Executing endpoint 'Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service)'
+2025-03-12 15:02:35.411 +02:00 [INF] Route matched with {action = "LogEvent", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogEvent(System.String) on controller Task1___Banking_Service.Controllers.LogsController (Task1 - Banking Service).
+2025-03-12 15:02:35.433 +02:00 [INF] Executing action method Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service) - Validation state: "Valid"
+2025-03-12 15:02:35.434 +02:00 [INF] New Event Logged: string
+2025-03-12 15:02:35.436 +02:00 [INF] Executed action method Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.9294ms.
+2025-03-12 15:02:35.442 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-12 15:02:35.457 +02:00 [INF] Executed action Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service) in 42.8405ms
+2025-03-12 15:02:35.457 +02:00 [INF] Executed endpoint 'Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service)'
+2025-03-12 15:02:35.459 +02:00 [INF] HTTP POST /api/logs responded 200 in 81.3958 ms
+2025-03-12 15:02:35.459 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44331/api/logs - 200 null application/json; charset=utf-8 89.2167ms
+2025-03-12 15:02:36.769 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44331/api/logs - application/json;odata.metadata=minimal;odata.streaming=true 8
+2025-03-12 15:02:36.771 +02:00 [INF] Executing endpoint 'Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service)'
+2025-03-12 15:02:36.778 +02:00 [INF] Route matched with {action = "LogEvent", controller = "Logs"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult LogEvent(System.String) on controller Task1___Banking_Service.Controllers.LogsController (Task1 - Banking Service).
+2025-03-12 15:02:36.780 +02:00 [INF] Executing action method Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service) - Validation state: "Valid"
+2025-03-12 15:02:36.780 +02:00 [INF] New Event Logged: string
+2025-03-12 15:02:36.780 +02:00 [INF] Executed action method Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.1149ms.
+2025-03-12 15:02:36.781 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-12 15:02:36.783 +02:00 [INF] Executed action Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service) in 5.1285ms
+2025-03-12 15:02:36.784 +02:00 [INF] Executed endpoint 'Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service)'
+2025-03-12 15:02:36.784 +02:00 [INF] HTTP POST /api/logs responded 200 in 12.9153 ms
+2025-03-12 15:02:36.784 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44331/api/logs - 200 null application/json; charset=utf-8 15.3872ms
+2025-03-12 15:02:51.607 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/odata/$metadata - null null
+2025-03-12 15:02:51.611 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData)'
+2025-03-12 15:02:51.613 +02:00 [INF] Route matched with {action = "GetMetadata", controller = "Metadata"}. Executing controller action with signature Microsoft.OData.Edm.IEdmModel GetMetadata() on controller Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController (Microsoft.AspNetCore.OData).
+2025-03-12 15:02:51.613 +02:00 [INF] Executing action method Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData) - Validation state: "Valid"
+2025-03-12 15:02:51.613 +02:00 [INF] Executed action method Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.5132ms.
+2025-03-12 15:02:51.620 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.OData.Edm.EdmModel'.
+2025-03-12 15:02:51.714 +02:00 [INF] Executed action Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData) in 100.7514ms
+2025-03-12 15:02:51.714 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData)'
+2025-03-12 15:02:51.714 +02:00 [INF] HTTP GET /odata/$metadata responded 200 in 102.4702 ms
+2025-03-12 15:02:51.714 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/odata/$metadata - 200 null application/xml; charset=utf-8 107.292ms
+2025-03-12 15:02:52.592 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/odata/$metadata - null null
+2025-03-12 15:02:52.593 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData)'
+2025-03-12 15:02:52.593 +02:00 [INF] Route matched with {action = "GetMetadata", controller = "Metadata"}. Executing controller action with signature Microsoft.OData.Edm.IEdmModel GetMetadata() on controller Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController (Microsoft.AspNetCore.OData).
+2025-03-12 15:02:52.593 +02:00 [INF] Executing action method Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData) - Validation state: "Valid"
+2025-03-12 15:02:52.593 +02:00 [INF] Executed action method Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0443ms.
+2025-03-12 15:02:52.594 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.OData.Edm.EdmModel'.
+2025-03-12 15:02:52.596 +02:00 [INF] Executed action Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData) in 3.0059ms
+2025-03-12 15:02:52.596 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetMetadata (Microsoft.AspNetCore.OData)'
+2025-03-12 15:02:52.596 +02:00 [INF] HTTP GET /odata/$metadata responded 200 in 3.3676 ms
+2025-03-12 15:02:52.596 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/odata/$metadata - 200 null application/xml; charset=utf-8 3.8886ms
+2025-03-12 15:02:59.492 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/odata - null null
+2025-03-12 15:02:59.492 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData)'
+2025-03-12 15:02:59.494 +02:00 [INF] Route matched with {action = "GetServiceDocument", controller = "Metadata"}. Executing controller action with signature Microsoft.OData.ODataServiceDocument GetServiceDocument() on controller Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController (Microsoft.AspNetCore.OData).
+2025-03-12 15:02:59.494 +02:00 [INF] Executing action method Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData) - Validation state: "Valid"
+2025-03-12 15:02:59.497 +02:00 [INF] Executed action method Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2.6453ms.
+2025-03-12 15:02:59.498 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.OData.ODataServiceDocument'.
+2025-03-12 15:02:59.524 +02:00 [INF] Executed action Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData) in 29.9945ms
+2025-03-12 15:02:59.524 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData)'
+2025-03-12 15:02:59.524 +02:00 [INF] HTTP GET /odata responded 200 in 31.8542 ms
+2025-03-12 15:02:59.524 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/odata - 200 null application/json; odata.metadata=minimal; odata.streaming=true; charset=utf-8 32.3449ms
+2025-03-12 15:03:00.370 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/odata - null null
+2025-03-12 15:03:00.370 +02:00 [INF] Executing endpoint 'Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData)'
+2025-03-12 15:03:00.370 +02:00 [INF] Route matched with {action = "GetServiceDocument", controller = "Metadata"}. Executing controller action with signature Microsoft.OData.ODataServiceDocument GetServiceDocument() on controller Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController (Microsoft.AspNetCore.OData).
+2025-03-12 15:03:00.371 +02:00 [INF] Executing action method Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData) - Validation state: "Valid"
+2025-03-12 15:03:00.371 +02:00 [INF] Executed action method Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.0561ms.
+2025-03-12 15:03:00.371 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.OData.ODataServiceDocument'.
+2025-03-12 15:03:00.372 +02:00 [INF] Executed action Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData) in 1.4002ms
+2025-03-12 15:03:00.372 +02:00 [INF] Executed endpoint 'Microsoft.AspNetCore.OData.Routing.Controllers.MetadataController.GetServiceDocument (Microsoft.AspNetCore.OData)'
+2025-03-12 15:03:00.372 +02:00 [INF] HTTP GET /odata responded 200 in 1.7233 ms
+2025-03-12 15:03:00.372 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/odata - 200 null application/json; odata.metadata=minimal; odata.streaming=true; charset=utf-8 2.1837ms
+2025-03-12 15:03:54.631 +02:00 [INF] Request starting HTTP/2 POST https://localhost:44331/api/transaction-logs - application/json;odata.metadata=minimal;odata.streaming=true 180
+2025-03-12 15:03:54.632 +02:00 [INF] Executing endpoint 'Task1___Banking_Service.Controllers.TransactionLogController.CreateTransactionLog (Task1 - Banking Service)'
+2025-03-12 15:03:54.650 +02:00 [INF] Route matched with {action = "CreateTransactionLog", controller = "TransactionLog"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateTransactionLog(Task1___Banking_Service.Models.TransactionLog) on controller Task1___Banking_Service.Controllers.TransactionLogController (Task1 - Banking Service).
+2025-03-12 15:03:54.772 +02:00 [INF] Executing action method Task1___Banking_Service.Controllers.TransactionLogController.CreateTransactionLog (Task1 - Banking Service) - Validation state: "Valid"
+2025-03-12 15:03:55.567 +02:00 [INF] Executed DbCommand (71ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = Int64), @p2='?' (DbType = Decimal), @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "TransactionLogs" ("Id", "AccountId", "Amount", "Details", "Status", "Timestamp", "TransactionType")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-03-12 15:03:55.667 +02:00 [INF] Executed action method Task1___Banking_Service.Controllers.TransactionLogController.CreateTransactionLog (Task1 - Banking Service), returned result Microsoft.AspNetCore.Mvc.CreatedAtActionResult in 895.4601ms.
+2025-03-12 15:03:55.669 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'Task1___Banking_Service.Models.TransactionLog'.
+2025-03-12 15:03:55.699 +02:00 [INF] Executed action Task1___Banking_Service.Controllers.TransactionLogController.CreateTransactionLog (Task1 - Banking Service) in 1048.7841ms
+2025-03-12 15:03:55.700 +02:00 [INF] Executed endpoint 'Task1___Banking_Service.Controllers.TransactionLogController.CreateTransactionLog (Task1 - Banking Service)'
+2025-03-12 15:03:55.700 +02:00 [INF] HTTP POST /api/transaction-logs responded 201 in 1068.3008 ms
+2025-03-12 15:03:55.713 +02:00 [INF] Request finished HTTP/2 POST https://localhost:44331/api/transaction-logs - 201 null application/json; charset=utf-8 1081.2198ms
+2025-03-12 15:03:55.752 +02:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = Int64), @p2='?' (DbType = Decimal), @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "TransactionLogs" ("Id", "AccountId", "Amount", "Details", "Status", "Timestamp", "TransactionType")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-03-12 15:03:55.773 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'Task1___Banking_Service.Data.TransactionDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "PK_TransactionLogs"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "PK_TransactionLogs"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: TransactionLogs
+    ConstraintName: PK_TransactionLogs
+    File: nbtinsert.c
+    Line: 666
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "PK_TransactionLogs"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "PK_TransactionLogs"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: TransactionLogs
+    ConstraintName: PK_TransactionLogs
+    File: nbtinsert.c
+    Line: 666
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
