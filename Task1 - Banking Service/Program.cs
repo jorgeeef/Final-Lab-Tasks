@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Task1___Banking_Service.Data;
 using RabbitMQ.Client;
+using Serilog;
 using Task1___Banking_Service.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,13 @@ channel.QueueDeclare(queue: "transaction_queue", durable: false, exclusive: fals
 builder.Services.AddSingleton(channel);
 builder.Services.AddHostedService<TransactionLogConsumer>();
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+// Use Serilog for logging
+builder.Host.UseSerilog();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -35,6 +43,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseSerilogRequestLogging();
 
 app.MapControllers();
 
