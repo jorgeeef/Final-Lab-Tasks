@@ -9,6 +9,7 @@ public class TransactionDbContext: DbContext
 
     public DbSet<TransactionLog> TransactionLogs { get; set; }
     public DbSet<AccountTransaction> AccountTransaction { get; set; }
+    public DbSet<TransactionEvent> TransactionEvents { get; set; }
     
     public DbSet<Logs> Logs { get; set; } 
     
