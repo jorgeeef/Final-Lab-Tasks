@@ -1,3 +1,5 @@
+using System.Reflection;
+using MediatR;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OData.ModelBuilder;
@@ -43,7 +45,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly()); 
 builder.Services.AddSingleton<RabbitMQLogService>();
 builder.Services.AddHostedService(provider => provider.GetRequiredService<RabbitMQLogService>());
 
