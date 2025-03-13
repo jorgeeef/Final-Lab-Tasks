@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using MediatR;
 
 namespace Task1___Banking_Service.Models;
 
-public class TransactionEvent
+public class TransactionEvent: INotification
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
