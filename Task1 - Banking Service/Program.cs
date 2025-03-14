@@ -8,6 +8,7 @@ using RabbitMQ.Client;
 using Serilog;
 using Task1___Banking_Service.Consumers;
 using Task1___Banking_Service.Models;
+using Task1___Banking_Service.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,6 +49,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(Assembly.GetExecutingAssembly()); 
 builder.Services.AddSingleton<RabbitMQLogService>();
 builder.Services.AddHostedService(provider => provider.GetRequiredService<RabbitMQLogService>());
+
+
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
 builder.Services.AddDbContext<TransactionDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

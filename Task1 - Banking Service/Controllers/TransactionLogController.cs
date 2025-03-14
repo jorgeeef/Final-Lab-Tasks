@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using RabbitMQ.Client;
 using Task1___Banking_Service.Data;
 using Task1___Banking_Service.Models;
+using Task1___Banking_Service.Services;
 
 namespace Task1___Banking_Service.Controllers;
 
@@ -15,11 +16,13 @@ public class TransactionLogController : ControllerBase
 {
     private readonly TransactionDbContext _context;
     private readonly IModel _channel;
+    private readonly TransactionEventService _transactionService;
 
-    public TransactionLogController(TransactionDbContext context, IModel channel)
+    public TransactionLogController(TransactionDbContext context, TransactionEventService transactionEventService, IModel channel)
     {
         _context = context;
         _channel = channel;
+        _transactionService = transactionEventService;
     }
 
     
@@ -125,5 +128,19 @@ public class TransactionLogController : ControllerBase
 
             return Ok(new { UserId = userId, Accounts = balanceSummary });
         }
+        
+        //Task5: Handles fund transfer between two accounts
+        
+        [HttpPost("transfer")]
+        public async Task<IActionResult> TransferFunds([FromBody] long FromAccountId ,long ToAccountId ,decimal Amount)
+        {
+            if (FromAccountId == ToAccountId)
+                return BadRequest("Cannot transfer to the same account.");
+
+            await _transactionService.TransferFundsAsync(FromAccountId, ToAccountId, Amount);
+            
+            return Ok(new { Message = "Transfer successful." });
+        }
+        
     
 }
