@@ -164,7 +164,7 @@ public class TransactionLogController : ControllerBase
                 [FromBody] long transactionId, 
                 [FromHeader(Name = "Accept-Language")] string language = "en")
             {
-                // Get the transaction using the repository
+                
                 var transaction = await _transactionRepository.GetByIdAsync(transactionId);
                 if (transaction == null) 
                     return NotFound(new { Message = "Transaction not found" });
