@@ -1,5 +1,7 @@
+using System.Globalization;
 using System.Reflection;
 using MediatR;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OData.ModelBuilder;
@@ -9,6 +11,7 @@ using Serilog;
 using Task1___Banking_Service.Consumers;
 using Task1___Banking_Service.Models;
 using Task1___Banking_Service.Repositories;
+using Task1___Banking_Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,7 +57,9 @@ builder.Services.AddHostedService(provider => provider.GetRequiredService<Rabbit
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<LocalizationService>();
 
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 
 builder.Services.AddDbContext<TransactionDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -71,6 +76,16 @@ builder.Services.AddControllers()
         .AddRouteComponents("odata", modelBuilder.GetEdmModel()));
 
 var app = builder.Build();
+
+var supportedCultures = new[] { "en", "es", "fr" };
+var localizationOptions = new RequestLocalizationOptions()
+{
+    DefaultRequestCulture = new RequestCulture("en"),
+    SupportedCultures = supportedCultures.Select(c => new CultureInfo(c)).ToList(),
+    SupportedUICultures = supportedCultures.Select(c => new CultureInfo(c)).ToList()
+};
+
+app.UseRequestLocalization(localizationOptions);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
