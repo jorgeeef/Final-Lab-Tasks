@@ -13,4 +13,6 @@ public class Account
     public decimal Balance { get; set; }
 
     public string AccountStatus { get; set; } = "Active";
+    
+    public Dictionary<string, string> NameTranslations { get; set; } 
 }

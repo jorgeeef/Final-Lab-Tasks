@@ -23,6 +23,17 @@
         },
         "runtime": {
           "Task1 - Banking Service.dll": {}
+        },
+        "resources": {
+          "en/Task1 - Banking Service.resources.dll": {
+            "locale": "en"
+          },
+          "es/Task1 - Banking Service.resources.dll": {
+            "locale": "es"
+          },
+          "fr/Task1 - Banking Service.resources.dll": {
+            "locale": "fr"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {

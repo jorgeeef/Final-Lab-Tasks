@@ -156,3 +156,16 @@ C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\en\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\es\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\fr\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.en.resources
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.es.resources
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.fr.resources
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.csproj.GenerateResource.cache
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\en\Task1 - Banking Service.resources.cs
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\en\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\es\Task1 - Banking Service.resources.cs
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\es\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\fr\Task1 - Banking Service.resources.cs
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\fr\Task1 - Banking Service.resources.dll

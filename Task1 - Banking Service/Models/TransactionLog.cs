@@ -20,4 +20,6 @@ public class TransactionLog
     public string Status { get; set; } // (Pending, Completed, Failed)
     
     public string Details { get; set; }
+    
+    public Dictionary<string, string> DescriptionTranslations { get; set; }
 }
