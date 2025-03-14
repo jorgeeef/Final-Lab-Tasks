@@ -1,10 +1,12 @@
 using System.Globalization;
 using System.Reflection;
+using System.Text.Json.Serialization;
 using MediatR;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OData.ModelBuilder;
+using Microsoft.OpenApi.Models;
 using Task1___Banking_Service.Data;
 using RabbitMQ.Client;
 using Serilog;
@@ -29,9 +31,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllOrigins", policy =>
     {
-        policy.AllowAnyOrigin() // Allow requests from any origin
-            .AllowAnyMethod()  // Allow any HTTP method 
-            .AllowAnyHeader(); // Allow any headers
+        policy.AllowAnyOrigin() 
+            .AllowAnyMethod()   
+            .AllowAnyHeader(); 
     });
 });
 
@@ -44,10 +46,23 @@ Log.Logger = new LoggerConfiguration()
 // Use Serilog for logging
 builder.Host.UseSerilog();
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+    });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Banking API", Version = "v1" });
+    
+    // Add this to handle reference loops
+    c.CustomSchemaIds(type => type.FullName);
+    
+    // Add this to handle nullable reference types
+    c.SupportNonNullableReferenceTypes();
+});
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 builder.Services.AddSingleton<RabbitMQLogService>();
@@ -91,7 +106,7 @@ app.UseRequestLocalization(localizationOptions);
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Banking Service API v1"));
 }
 
 app.UseHttpsRedirection();

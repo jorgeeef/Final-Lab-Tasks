@@ -20,3 +20,75 @@ ORDER BY "MigrationId";
 CREATE EXTENSION IF NOT EXISTS hstore;
 2025-03-14 15:11:04.194 +02:00 [ERR] Failed executing DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 ALTER TABLE "TransactionLogs" ADD "DescriptionTranslations" hstore NOT NULL;
+2025-03-14 15:25:01.044 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-14 15:25:01.058 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - null null
+2025-03-14 15:25:01.073 +02:00 [INF] Hosting environment: Development
+2025-03-14 15:25:01.073 +02:00 [INF] Content root path: C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service
+2025-03-14 15:25:01.215 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - 200 null text/html;charset=utf-8 159.6226ms
+2025-03-14 15:25:01.707 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - null null
+2025-03-14 15:25:01.790 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/logs" for actions - Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service),Task1___Banking_Service.Controllers.LogsController.PostLog (Task1 - Banking Service). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-14 15:25:01.804 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 96.7409ms
+2025-03-14 15:26:03.670 +02:00 [INF] Application is shutting down...
+2025-03-14 15:26:31.628 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-14 15:26:31.648 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - null null
+2025-03-14 15:26:31.663 +02:00 [INF] Hosting environment: Development
+2025-03-14 15:26:31.663 +02:00 [INF] Content root path: C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service
+2025-03-14 15:26:31.836 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - 200 null text/html;charset=utf-8 192.8711ms
+2025-03-14 15:26:32.120 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - null null
+2025-03-14 15:26:32.191 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/logs" for actions - Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service),Task1___Banking_Service.Controllers.LogsController.PostLog (Task1 - Banking Service). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-14 15:26:32.201 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 82.1638ms
+2025-03-14 15:27:56.920 +02:00 [INF] Application is shutting down...
+2025-03-14 15:29:13.127 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-14 15:29:13.145 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - null null
+2025-03-14 15:29:13.160 +02:00 [INF] Hosting environment: Development
+2025-03-14 15:29:13.160 +02:00 [INF] Content root path: C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service
+2025-03-14 15:29:13.302 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - 200 null text/html;charset=utf-8 162.2281ms
+2025-03-14 15:29:13.401 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - null null
+2025-03-14 15:29:13.522 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/logs" for actions - Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service),Task1___Banking_Service.Controllers.LogsController.PostLog (Task1 - Banking Service). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-14 15:29:13.544 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 143.578ms
+2025-03-14 15:29:25.137 +02:00 [INF] Application is shutting down...
+2025-03-14 15:30:00.602 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-14 15:30:00.614 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - null null
+2025-03-14 15:30:00.632 +02:00 [INF] Hosting environment: Development
+2025-03-14 15:30:00.632 +02:00 [INF] Content root path: C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service
+2025-03-14 15:30:00.773 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - 200 null text/html;charset=utf-8 161.5343ms
+2025-03-14 15:30:00.868 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - null null
+2025-03-14 15:30:00.938 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/logs" for actions - Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service),Task1___Banking_Service.Controllers.LogsController.PostLog (Task1 - Banking Service). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-14 15:30:00.948 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 80.4031ms
+2025-03-14 15:31:02.283 +02:00 [INF] Application is shutting down...

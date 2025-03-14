@@ -5,7 +5,14 @@ C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Task1 - Banking Service.runtimeconfig.json
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Task1 - Banking Service.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Task1 - Banking Service.pdb
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\en\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\es\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\fr\Task1 - Banking Service.resources.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Humanizer.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.AspNetCore.OData.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -21,17 +28,36 @@ C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OData.Core.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OData.Edm.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OData.ModelBuilder.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Spatial.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Npgsql.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.AspNetCore.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Sinks.File.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -112,6 +138,10 @@ C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.csproj.AssemblyReference.cache
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.en.resources
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.es.resources
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.fr.resources
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.csproj.GenerateResource.cache
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.AssemblyInfoInputs.cache
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.AssemblyInfo.cs
@@ -119,6 +149,12 @@ C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.sourcelink.json
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\en\Task1 - Banking Service.resources.cs
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\en\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\es\Task1 - Banking Service.resources.cs
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\es\Task1 - Banking Service.resources.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\fr\Task1 - Banking Service.resources.cs
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\fr\Task1 - Banking Service.resources.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\staticwebassets\msbuild.Task1 - Banking Service.Microsoft.AspNetCore.StaticWebAssets.props
@@ -133,39 +169,3 @@ C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.pdb
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.genruntimeconfig.cache
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\ref\Task1 - Banking Service.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\RabbitMQ.Client.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Abstractions.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.AspNetCore.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Sinks.Console.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Serilog.Sinks.File.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.AspNetCore.OData.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OData.Core.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OData.Edm.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OData.ModelBuilder.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Spatial.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.Contracts.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\en\Task1 - Banking Service.resources.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\es\Task1 - Banking Service.resources.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\fr\Task1 - Banking Service.resources.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.en.resources
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.es.resources
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1___Banking_Service.Resources.Messages.fr.resources
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\Task1 - Banking Service.csproj.GenerateResource.cache
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\en\Task1 - Banking Service.resources.cs
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\en\Task1 - Banking Service.resources.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\es\Task1 - Banking Service.resources.cs
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\es\Task1 - Banking Service.resources.dll
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\fr\Task1 - Banking Service.resources.cs
-C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\obj\Debug\net8.0\fr\Task1 - Banking Service.resources.dll
