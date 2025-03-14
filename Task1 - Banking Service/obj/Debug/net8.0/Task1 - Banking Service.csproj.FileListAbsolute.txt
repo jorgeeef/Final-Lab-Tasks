@@ -153,3 +153,6 @@ C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OData.Edm.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.OData.ModelBuilder.dll
 C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\Microsoft.Spatial.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.Contracts.dll
+C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="AccountDetails" xml:space="preserve">
+    <value>Detalles de la cuenta</value>
+  </data>
+  <data name="TransactionSuccess" xml:space="preserve">
+    <value>Transacción completada</value>
+  </data>
+    <data name="InsufficientFunds" xml:space="preserve">
+    <value>Fondos insuficientes</value>
+  </data>
+</root>
