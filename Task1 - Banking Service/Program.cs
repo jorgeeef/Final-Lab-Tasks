@@ -73,6 +73,7 @@ builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<LocalizationService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
 
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
 

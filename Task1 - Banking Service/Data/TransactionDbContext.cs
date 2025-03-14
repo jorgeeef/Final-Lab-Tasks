@@ -13,6 +13,8 @@ public class TransactionDbContext: DbContext
     public DbSet<Account> Accounts { get; set; }
     public DbSet<TransactionEvent> TransactionEvents { get; set; }
     
+    public DbSet<Transaction> Transactions { get; set; }
+    
     public DbSet<Logs> Logs { get; set; } 
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using RabbitMQ.Client;
 using Task1___Banking_Service.Data;
 using Task1___Banking_Service.Models;
+using Task1___Banking_Service.Repositories;
 using Task1___Banking_Service.Services;
 
 namespace Task1___Banking_Service.Controllers;
@@ -17,12 +18,14 @@ public class TransactionLogController : ControllerBase
     private readonly TransactionDbContext _context;
     private readonly IModel _channel;
     private readonly TransactionEventService _transactionService;
+    private readonly INotificationService _notificationService;
 
-    public TransactionLogController(TransactionDbContext context, TransactionEventService transactionEventService, IModel channel)
+    public TransactionLogController(TransactionDbContext context, INotificationService notificationService,TransactionEventService transactionEventService, IModel channel)
     {
         _context = context;
         _channel = channel;
         _transactionService = transactionEventService;
+        _notificationService = notificationService;
     }
 
     
@@ -142,5 +145,41 @@ public class TransactionLogController : ControllerBase
             return Ok(new { Message = "Transfer successful." });
         }
         
+        [ApiController]
+        [Route("transactions")]
+        public class TransactionController : ControllerBase
+        {
+            private readonly ITransactionRepository _transactionRepository;
+            private readonly INotificationService _notificationService;
+
+            // Inject both repositories through the constructor
+            public TransactionController(ITransactionRepository transactionRepository, INotificationService notificationService)
+            {
+                _transactionRepository = transactionRepository;
+                _notificationService = notificationService;
+            }
+
+            [HttpPost("notify")]
+            public async Task<IActionResult> SendTransactionNotification(
+                [FromBody] long transactionId, 
+                [FromHeader(Name = "Accept-Language")] string language = "en")
+            {
+                // Get the transaction using the repository
+                var transaction = await _transactionRepository.GetByIdAsync(transactionId);
+                if (transaction == null) 
+                    return NotFound(new { Message = "Transaction not found" });
+
+                // Fetch the message in the requested language or fall back to English
+                string message = transaction.DescriptionTranslations != null &&
+                                 transaction.DescriptionTranslations.ContainsKey(language)
+                    ? transaction.DescriptionTranslations[language]
+                    : transaction.DescriptionTranslations?["en"] ?? "Transaction details not available";
+
+                // Send the notification
+                await _notificationService.SendNotificationAsync($"Transaction Alert: {message}");
+
+                return Ok(new { Message = "Notification sent successfully." });
+            }
+        }
     
 }

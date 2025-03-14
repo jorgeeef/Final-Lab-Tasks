@@ -17,4 +17,9 @@ public class TransactionRepository: ITransactionRepository
         await _context.TransactionLogs.AddAsync(transaction);
         await _context.SaveChangesAsync();
     }
+    
+    public async Task<Transaction> GetByIdAsync(long id)
+    {
+        return await _context.Transactions.FindAsync(id);
+    }
 }
