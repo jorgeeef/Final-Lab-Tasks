@@ -1,0 +1,26 @@
+2025-03-15 10:37:35.304 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 10:37:35.326 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - null null
+2025-03-15 10:37:35.346 +02:00 [INF] Hosting environment: Development
+2025-03-15 10:37:35.346 +02:00 [INF] Content root path: C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service
+2025-03-15 10:37:35.509 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - 200 null text/html;charset=utf-8 188.4793ms
+2025-03-15 10:37:35.612 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - null null
+2025-03-15 10:37:35.689 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST api/logs" for actions - Task1___Banking_Service.Controllers.LogsController.LogEvent (Task1 - Banking Service),Task1___Banking_Service.Controllers.LogsController.PostLog (Task1 - Banking Service). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-03-15 10:37:35.714 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 101.7994ms
+2025-03-15 10:38:20.545 +02:00 [INF] Application is shutting down...
+2025-03-15 10:42:45.048 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-15 10:42:45.066 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/index.html - null null
+2025-03-15 10:42:45.084 +02:00 [INF] Hosting environment: Development
+2025-03-15 10:42:45.084 +02:00 [INF] Content root path: C:\Users\user\RiderProjects\Task1 - Banking Service\Task1 - Banking Service
+2025-03-15 10:42:45.248 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/index.html - 200 null text/html;charset=utf-8 186.4258ms
+2025-03-15 10:42:45.355 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - null null
+2025-03-15 10:42:45.522 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44331/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 166.9433ms
+2025-03-15 10:43:07.321 +02:00 [INF] Application is shutting down...

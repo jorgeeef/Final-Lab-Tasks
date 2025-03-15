@@ -19,7 +19,7 @@ public class LogsController : ControllerBase
         _context = context;
     }
 
-    [HttpPost]
+    [HttpPost("log-event")]
     public IActionResult LogEvent([FromBody] string message)
     {
         _logger.LogInformation("New Event Logged: {Message}", message);
@@ -51,8 +51,7 @@ public class LogsController : ControllerBase
     }
 
     
-    // POST /api/logs
-    [HttpPost]
+    [HttpPost("add-log")]
     public async Task<IActionResult> PostLog([FromBody] Logs log)
     {
         if (log == null)
