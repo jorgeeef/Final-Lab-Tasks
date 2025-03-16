@@ -1,10 +1,10 @@
 ﻿namespace Task1___Banking_Service.Repositories;
 
-public class NotificationService: INotificationService
+public class NotificationRepository: INotificationRepository
 {
-    private readonly ILogger<NotificationService> _logger;
+    private readonly ILogger<NotificationRepository> _logger;
 
-    public NotificationService(ILogger<NotificationService> logger)
+    public NotificationRepository(ILogger<NotificationRepository> logger)
     {
         _logger = logger;
     }

@@ -1,6 +1,6 @@
 ﻿namespace Task1___Banking_Service.Repositories;
 
-public interface INotificationService
+public interface INotificationRepository
 {
     Task SendNotificationAsync(string message);
 }

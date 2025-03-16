@@ -18,14 +18,14 @@ public class TransactionLogController : ControllerBase
     private readonly TransactionDbContext _context;
     private readonly IModel _channel;
     private readonly TransactionEventService _transactionService;
-    private readonly INotificationService _notificationService;
+    private readonly INotificationRepository _notificationRepository;
 
-    public TransactionLogController(TransactionDbContext context, INotificationService notificationService,TransactionEventService transactionEventService, IModel channel)
+    public TransactionLogController(TransactionDbContext context, INotificationRepository notificationRepository,TransactionEventService transactionEventService, IModel channel)
     {
         _context = context;
         _channel = channel;
         _transactionService = transactionEventService;
-        _notificationService = notificationService;
+        _notificationRepository = notificationRepository;
     }
 
     
@@ -150,13 +150,13 @@ public class TransactionLogController : ControllerBase
         public class TransactionController : ControllerBase
         {
             private readonly ITransactionRepository _transactionRepository;
-            private readonly INotificationService _notificationService;
+            private readonly INotificationRepository _notificationRepository;
 
             // Inject both repositories through the constructor
-            public TransactionController(ITransactionRepository transactionRepository, INotificationService notificationService)
+            public TransactionController(ITransactionRepository transactionRepository, INotificationRepository notificationRepository)
             {
                 _transactionRepository = transactionRepository;
-                _notificationService = notificationService;
+                _notificationRepository = notificationRepository;
             }
 
             [HttpPost("notify")]
@@ -176,7 +176,7 @@ public class TransactionLogController : ControllerBase
                     : transaction.DescriptionTranslations?["en"] ?? "Transaction details not available";
 
                 // Send the notification
-                await _notificationService.SendNotificationAsync($"Transaction Alert: {message}");
+                await _notificationRepository.SendNotificationAsync($"Transaction Alert: {message}");
 
                 return Ok(new { Message = "Notification sent successfully." });
             }
