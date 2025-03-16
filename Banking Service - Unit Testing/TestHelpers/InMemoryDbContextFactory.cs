@@ -8,7 +8,7 @@ public static class InMemoryDbContextFactory
     public static TransactionDbContext Create()
     {
         var options = new DbContextOptionsBuilder<TransactionDbContext>()
-            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
             .Options;
 
         return new TransactionDbContext(options);

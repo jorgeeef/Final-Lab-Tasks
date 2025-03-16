@@ -28,9 +28,4 @@
       <ProjectReference Include="..\Task1 - Banking Service\Task1 - Banking Service.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="AccountManagementTests\" />
-      <Folder Include="TransactionTests\" />
-    </ItemGroup>
-
 </Project>
