@@ -24,4 +24,8 @@
         <Using Include="Xunit"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Task1 - Banking Service\Task1 - Banking Service.csproj" />
+    </ItemGroup>
+
 </Project>
